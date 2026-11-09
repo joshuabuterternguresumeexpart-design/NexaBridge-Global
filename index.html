@@ -4,173 +4,636 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="NexaBridge Global connects people, empowers professionals and supports businesses worldwide.">
-<title>NexaBridge Global | Connecting People</title>
+<meta name="theme-color" content="#102747">
+<meta name="description" content="NexaBridge Global connects people, empowers professionals and supports businesses worldwide through career services, digital solutions and business support.">
+<title>NexaBridge Global | Connecting People. Empowering Progress.</title>
+
 <style>
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Arial,sans-serif;color:#253247;line-height:1.7}
-header{background:#0b1930;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.brand{font-size:21px;font-weight:bold;letter-spacing:1px}
-.brand span{color:#d6ad55}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-size:14px}
-nav a:hover{color:#d6ad55}
-.hero{background:linear-gradient(90deg,rgba(7,18,37,.88),rgba(7,18,37,.35)),url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;padding:120px 8%;text-align:center}
-.hero h1{font-size:clamp(35px,6vw,58px);line-height:1.2;margin:0}
-.hero h1 span{color:#e5bd68}
-.hero p{max-width:720px;margin:22px auto 30px;font-size:18px}
-.btn{display:inline-block;background:#d6ad55;color:#0b1930;padding:13px 25px;border-radius:5px;text-decoration:none;font-weight:bold}
-section{padding:70px 8%}
-.section-title{text-align:center;margin-bottom:38px}
-.section-title h2{color:#0b1930;font-size:32px;margin-bottom:8px}
-.section-title p{color:#657187}
-.services{background:#f4f6fa}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
-.card{background:white;border-radius:10px;overflow:hidden;box-shadow:0 5px 22px rgba(0,0,0,.08);border-bottom:3px solid #d6ad55}
-.card img{width:100%;height:190px;object-fit:cover;display:block}
-.card-content{padding:22px}
-.card h3{color:#0b1930;margin-top:0}
-.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:35px;align-items:center;max-width:1100px;margin:auto}
-.about img{width:100%;height:320px;object-fit:cover;border-radius:10px}
-.about h2{color:#0b1930}
-.highlight{color:#a57c27;font-weight:bold}
-.contact{background:#0b1930;color:white;text-align:center}
-.contact h2{color:#e5bd68}
-.contact p{margin:10px}
-.contact a:not(.btn){color:#e5bd68}
-footer{background:#071225;color:#dce3ee;text-align:center;padding:22px;font-size:14px}
-@media(max-width:600px){
-header{justify-content:center}
-nav{justify-content:center;gap:13px}
-.hero{padding:85px 7%}
-section{padding:55px 7%}
+:root {
+  --navy:#102747;
+  --deep:#091a30;
+  --gold:#d5ad59;
+  --white:#ffffff;
+  --light:#f5f7fa;
+  --text:#263449;
+  --muted:#66758a;
+}
+* {box-sizing:border-box;scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  line-height:1.7;
+}
+a {text-decoration:none;color:inherit}
+img {max-width:100%;display:block}
+.container {width:min(1120px,91%);margin:auto}
+header {
+  background:var(--navy);
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 3px 15px #0002;
+}
+.navbar {
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.brand {
+  font-size:21px;
+  font-weight:800;
+  letter-spacing:.4px;
+}
+.brand span {color:var(--gold)}
+nav {display:flex;gap:20px;align-items:center}
+nav a {font-size:13px;font-weight:600}
+nav a:hover {color:var(--gold)}
+.menu-btn {
+  display:none;
+  background:transparent;
+  color:white;
+  border:1px solid #ffffff66;
+  padding:8px 12px;
+  border-radius:6px;
+  font-size:19px;
+}
+.hero {
+  color:white;
+  background:
+    linear-gradient(90deg,rgba(7,22,42,.96),rgba(7,22,42,.72)),
+    url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85') center/cover;
+  padding:110px 0;
+}
+.hero-content {max-width:720px}
+.eyebrow {
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:12px;
+}
+h1 {font-size:clamp(38px,6vw,66px);line-height:1.12;margin:17px 0}
+.hero p {font-size:18px;color:#e0e7f0;max-width:650px}
+.gold {color:var(--gold)}
+.btn {
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:5px;
+  font-weight:700;
+  margin:10px 8px 0 0;
+  transition:.2s;
+}
+.btn-gold {background:var(--gold);color:var(--deep)}
+.btn-outline {border:1px solid white;color:white}
+.btn:hover {transform:translateY(-2px)}
+section {padding:76px 0}
+.section-head {text-align:center;max-width:700px;margin:0 auto 42px}
+.section-head h2 {color:var(--navy);font-size:34px;margin:8px 0}
+.section-head p {color:var(--muted)}
+.kicker {
+  color:#a17a2e;
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+.intro {background:white}
+.intro-grid {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:45px;
+  align-items:center;
+}
+.intro h2 {font-size:34px;color:var(--navy);line-height:1.25}
+.intro-image {
+  width:100%;
+  height:340px;
+  object-fit:cover;
+  border-radius:12px;
+}
+.services {background:var(--light)}
+.service-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.service-card {
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  border:1px solid #e7ebf0;
+  transition:.2s;
+}
+.service-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 12px 30px #10274712;
+  border-color:var(--gold);
+}
+.service-number {
+  width:42px;height:42px;
+  display:grid;place-items:center;
+  border-radius:8px;
+  background:#f6eddc;
+  color:#91691e;
+  font-weight:800;
+}
+.service-card h3 {color:var(--navy);font-size:18px;margin:17px 0 8px}
+.service-card p {font-size:14px;color:var(--muted);margin:0}
+.about {background:white}
+.about-grid {
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:45px;
+  align-items:center;
+}
+.founder-photo {
+  width:100%;
+  max-width:360px;
+  height:390px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:12px;
+  border:5px solid #f5ecd9;
+}
+.about h2 {font-size:32px;color:var(--navy)}
+.about-note {
+  background:#f7f8fa;
+  padding:18px;
+  border-left:4px solid var(--gold);
+  margin-top:20px;
+}
+.values {background:var(--navy);color:white}
+.values-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+.value-card {
+  padding:25px;
+  border:1px solid #ffffff25;
+  border-radius:9px;
+}
+.value-card h3 {color:var(--gold)}
+.value-card p {color:#d8e0eb;font-size:14px}
+.community {
+  background:linear-gradient(120deg,#f6f1e7,#ffffff);
+}
+.community-inner {max-width:800px;margin:auto;text-align:center}
+.community h2 {font-size:34px;color:var(--navy)}
+.contact {background:var(--light)}
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+}
+.contact-box {
+  background:white;
+  border-radius:10px;
+  padding:25px;
+}
+.contact-box h3 {color:var(--navy)}
+.contact-item {padding:13px 0;border-bottom:1px solid #edf0f3}
+.contact-item strong {display:block;color:var(--navy)}
+.contact-item a {color:#8a6727;overflow-wrap:anywhere}
+form input,form select,form textarea {
+  width:100%;
+  padding:13px;
+  margin:7px 0 14px;
+  border:1px solid #dce2e9;
+  border-radius:5px;
+  font:inherit;
+  background:white;
+}
+form label {font-weight:700;font-size:13px;color:var(--navy)}
+form textarea {min-height:120px;resize:vertical}
+form button {
+  width:100%;
+  background:var(--navy);
+  color:white;
+  border:0;
+  padding:14px;
+  border-radius:5px;
+  font-weight:700;
+  font-size:15px;
+}
+footer {background:var(--deep);color:white;padding:42px 0 20px}
+.footer-grid {
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr;
+  gap:30px;
+}
+footer h3,footer h4 {color:var(--gold)}
+footer p,footer a {color:#d1d9e4;font-size:14px}
+footer a:hover {color:var(--gold)}
+.footer-links {display:grid;gap:8px}
+.copyright {
+  border-top:1px solid #ffffff25;
+  text-align:center;
+  margin-top:30px;
+  padding-top:18px;
+  font-size:12px;
+  color:#b8c4d3;
+}
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:18px;
+  z-index:99;
+  background:#168b52;
+  color:white;
+  padding:12px 17px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
+  box-shadow:0 5px 18px #0003;
+}
+@media(max-width:800px) {
+  .menu-btn {display:block}
+  nav {
+    display:none;
+    position:absolute;
+    top:76px;
+    left:0;right:0;
+    background:var(--navy);
+    padding:20px 5%;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  nav.open {display:flex}
+  .intro-grid,.about-grid,.contact-grid {grid-template-columns:1fr}
+  .service-grid {grid-template-columns:repeat(2,1fr)}
+  .values-grid {grid-template-columns:1fr}
+  .footer-grid {grid-template-columns:1fr}
+  .hero {padding:80px 0}
+}
+@media(max-width:480px) {
+  .service-grid {grid-template-columns:1fr}
+  section {padding:58px 0}
+  .section-head h2,.intro h2,.about h2 {font-size:28px}
+  .brand {font-size:18px}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-
-  
-<div class="brand" style="display:flex;align-items:center;gap:10px;color:white;font-weight:800;font-size:22px;">
-  <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#D9AA32" stroke-width="5"/>
-    <path d="M12 55 Q30 20 50 48 T88 40" fill="none" stroke="#D9AA32" stroke-width="7" stroke-linecap="round"/>
-    <path d="M15 70 Q50 48 85 70" fill="none" stroke="white" stroke-width="5" stroke-linecap="round"/>
-    <path d="M50 8 V92 M8 50 H92" stroke="white" stroke-width="2" opacity=".5"/>
-  </svg>
-  <span>
-    NEXA<span style="color:#D9AA32;">BRIDGE</span>
-    <small style="display:block;color:#D9AA32;font-size:11px;letter-spacing:4px;">GLOBAL</small>
-  </span>
-</div>
-  
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
+  <div class="container navbar">
+    <a class="brand" href="#home">NEXA<span>BRIDGE</span> GLOBAL</a>
+    <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Open navigation">☰</button>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#community">Community</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 <section class="hero" id="home">
-<h1>Connecting People.<br><span>Empowering Progress.</span></h1>
-<p>Your bridge to career development, digital support, creative solutions and new opportunities worldwide.</p>
-<a class="btn" href="#services">Explore Our Services</a>
+  <div class="container hero-content">
+    <div class="eyebrow">Based in Nigeria · Serving Worldwide</div>
+    <h1>Connecting People.<br><span class="gold">Empowering Progress.</span></h1>
+    <p>
+      Welcome to NexaBridge Global — an emerging international
+      organisation connecting individuals, professionals,
+      entrepreneurs and businesses through career development,
+      digital solutions and practical support.
+    </p>
+    <a class="btn btn-gold" href="#services">Explore Our Services</a>
+    <a class="btn btn-outline" href="#contact">Get in Touch</a>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container intro-grid">
+    <div>
+      <div class="kicker">Welcome to NexaBridge Global</div>
+      <h2>Building connections. Creating possibilities.</h2>
+      <p>
+        We believe that access to the right support, useful resources
+        and meaningful connections can help people and businesses
+        take their next steps.
+      </p>
+      <p>
+        Our work brings together career services, administrative
+        assistance, creative solutions and business support in one
+        accessible platform.
+      </p>
+      <a class="btn btn-gold" href="#about">Discover Our Organisation</a>
+    </div>
+    <img class="intro-image"
+      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=85"
+      alt="Professionals collaborating in a modern workplace">
+  </div>
 </section>
 
 <section class="services" id="services">
-<div class="section-title">
-<h2>Our Services</h2>
-<p>Professional support for individuals, professionals and businesses worldwide.</p>
-</div>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">What We Do</div>
+      <h2>Our Services</h2>
+      <p>
+        Practical services designed to support career growth,
+        professional development and business progress.
+      </p>
+    </div>
 
-<div class="cards">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80" alt="Professionals collaborating">
-<div class="card-content">
-<h3>Career Services</h3>
-<p>CV and résumé writing, cover letters, LinkedIn profile optimisation and career document support.</p>
-</div>
-</div>
+    <div class="service-grid">
+      <article class="service-card">
+        <div class="service-number">01</div>
+        <h3>CV & Résumé Writing</h3>
+        <p>Professionally structured CVs and résumés that present your experience, skills and career strengths clearly.</p>
+      </article>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Virtual assistant working on computer">
-<div class="card-content">
-<h3>Virtual Assistance</h3>
-<p>Online research, data entry, document formatting and administrative support.</p>
-</div>
-</div>
+      <article class="service-card">
+        <div class="service-number">02</div>
+        <h3>Job Search Assistance</h3>
+        <p>Support with identifying relevant vacancies, researching employers and organising your job application search. We do not guarantee employment.</p>
+      </article>
 
-  
-<div class="card">
-<img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Creative graphic design workspace">
-<div class="card-content">
-<h3>Creative Design</h3>
-<p>Professional flyers, social media graphics and promotional design materials.</p>
-</div>
-</div>
+      <article class="service-card">
+        <div class="service-number">03</div>
+        <h3>LinkedIn Profile Optimisation</h3>
+        <p>Improve your professional headline, About section, experience and profile presentation.</p>
+      </article>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Modern business office">
-<div class="card-content">
-<h3>Business Support</h3>
-<p>Digital assistance and practical support for entrepreneurs and small businesses.</p>
-</div>
-</div>
+      <article class="service-card">
+        <div class="service-number">04</div>
+        <h3>Cover Letter Writing</h3>
+        <p>Clear, tailored cover letters that communicate your experience and interest in specific opportunities.</p>
+      </article>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" alt="People connecting together">
-<div class="card-content">
-<h3>Global Community</h3>
-<p>Connecting job seekers, professionals and entrepreneurs with people, knowledge and opportunities.</p>
-</div>
-</div>
-</div>
+      <article class="service-card">
+        <div class="service-number">05</div>
+        <h3>Virtual Assistance</h3>
+        <p>Online research, data entry, administrative assistance and everyday digital task support.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-number">06</div>
+        <h3>Creative Design</h3>
+        <p>Promotional flyers, social media graphics and visual materials for individuals and businesses.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-number">07</div>
+        <h3>Business Support</h3>
+        <p>Practical organisational and digital support for entrepreneurs, startups and small businesses.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-number">08</div>
+        <h3>Website & Digital Support</h3>
+        <p>Basic website setup assistance, website content organisation and support with digital presence.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-number">09</div>
+        <h3>Document Preparation & Formatting</h3>
+        <p>Document editing, professional formatting, presentation preparation and file organisation.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-number">10</div>
+        <h3>Global Professional Community</h3>
+        <p>A community vision connecting job seekers, professionals and entrepreneurs through networking and shared knowledge.</p>
+      </article>
+    </div>
+  </div>
 </section>
 
-<section id="about">
-<div class="about">
-<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=85" alt="A team working together">
-<div>
-<h2>About NexaBridge Global</h2>
-<p>NexaBridge Global is an emerging international organisation established in Nigeria, with a vision to serve individuals, professionals and businesses around the world.</p>
-<p>Our mission is to bridge the gap between people, skills, businesses and opportunities through reliable career, creative and digital support services.</p>
-<p class="highlight">Based in Nigeria. Serving the World.</p>
-</div>
-</div>
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div>
+      <img class="founder-photo"
+        src="nexabridge-founder-joshua.jpg"
+        alt="Joshua, founder of NexaBridge Global">
+    </div>
+    <div>
+      <div class="kicker">About Our Organisation</div>
+      <h2>A growing organisation with a global outlook.</h2>
+      <p>
+        NexaBridge Global is an emerging international career
+        and digital support organisation based in Nigeria,
+        serving individuals and businesses worldwide.
+      </p>
+      <p>
+        We focus on making useful professional and business
+        support more accessible through career services,
+        virtual assistance, creative design and digital solutions.
+      </p>
+      <div class="about-note">
+        <strong>Our approach:</strong>
+        We value professionalism, clear communication,
+        responsible service and meaningful connections.
+      </div>
+      <h3 style="color:#102747">Founder</h3>
+      <p><strong>Joshua Buter Terngu</strong><br>Founder, NexaBridge Global</p>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">What Guides Us</div>
+      <h2 style="color:white">Our Mission, Vision & Values</h2>
+      <p style="color:#d8e0eb">The principles behind our work and our international outlook.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>Our Mission</h3>
+        <p>To connect people, empower professionals and support businesses through accessible career, digital and administrative services.</p>
+      </div>
+      <div class="value-card">
+        <h3>Our Vision</h3>
+        <p>To grow into a trusted international platform that creates meaningful connections and supports professional and business progress.</p>
+      </div>
+      <div class="value-card">
+        <h3>Our Values</h3>
+        <p>Professionalism, integrity, accessibility, collaboration, continuous learning and respect for every individual.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="community" id="community">
+  <div class="container community-inner">
+    <div class="kicker">Global Connections</div>
+    <h2>A community built around connection and progress.</h2>
+    <p>
+      We believe professionals, job seekers and entrepreneurs
+      can learn from one another, share knowledge and build
+      valuable connections across borders.
+    </p>
+    <p>
+      NexaBridge Global aims to develop a welcoming professional
+      community where people can connect, exchange ideas and
+      discover useful resources.
+    </p>
+    <a class="btn btn-gold" href="#contact">Connect With Us</a>
+  </div>
 </section>
 
 <section class="contact" id="contact">
-<h2>Let's Connect</h2>
-<p>Looking for professional support or interested in working with us?</p>
-<p>Contact our team by email:</p>
-<p><a href="mailto:careerbridgeglobal@gmail.com">careerbridgeglobal@gmail.com</a></p>
-<a class="btn" href="mailto:careerbridgeglobal@gmail.com?subject=NexaBridge%20Global%20Enquiry">Contact Our Team</a>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Start a Conversation</div>
+      <h2>Contact NexaBridge Global</h2>
+      <p>
+        Have a question or interested in one of our services?
+        We welcome enquiries from individuals and businesses worldwide.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-box">
+        <h3>Get in Touch</h3>
+        <p>Choose your preferred way to contact our organisation.</p>
+
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:joshuabuterterngu.resumes@gmail.com">
+            joshuabuterterngu.resumes@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>WhatsApp</strong>
+          <a href="https://wa.me/2347069936770" target="_blank" rel="noopener">
+            +234 706 993 6770
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Location</strong>
+          Nigeria · Serving individuals and businesses worldwide
+        </div>
+
+        <p style="margin-top:20px;font-size:13px;color:#66758a">
+          We welcome professional enquiries, service requests
+          and opportunities to connect.
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <h3>Send an Enquiry</h3>
+        <p style="font-size:13px;color:#66758a">
+          Complete the form to open an email with your enquiry details.
+        </p>
+
+        <form id="contactForm">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" placeholder="Your full name" required>
+
+          <label for="visitorEmail">Email Address</label>
+          <input id="visitorEmail" type="email" placeholder="Your email address" required>
+
+          <label for="service">Service of Interest</label>
+          <select id="service" required>
+            <option value="">Select a service</option>
+            <option>CV & Résumé Writing</option>
+            <option>Job Search Assistance</option>
+            <option>LinkedIn Profile Optimisation</option>
+            <option>Cover Letter Writing</option>
+            <option>Virtual Assistance</option>
+            <option>Creative Design</option>
+            <option>Business Support</option>
+            <option>Website & Digital Support</option>
+            <option>Document Preparation & Formatting</option>
+            <option>Global Professional Community</option>
+            <option>General Enquiry</option>
+          </select>
+
+          <label for="message">Your Message</label>
+          <textarea id="message" placeholder="How can we assist you?" required></textarea>
+
+          <button type="submit">Continue to Email</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 </main>
 
 <footer>
-<p>© 2026 NexaBridge Global. All rights reserved.</p>
-<p>Connecting People. Empowering Progress.</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>NexaBridge Global</h3>
+        <p>Connecting People. Empowering Progress.</p>
+        <p>
+          An emerging international organisation based in Nigeria,
+          supporting individuals and businesses worldwide.
+        </p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Our Services</a>
+          <a href="#community">Global Community</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="mailto:joshuabuterterngu.resumes@gmail.com">Business Email</a>
+          <a href="https://wa.me/2347069936770" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <p>Nigeria · Worldwide Service Coverage</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> NexaBridge Global. All rights reserved.
+      <br>Connecting People. Empowering Progress.
+    </div>
+  </div>
 </footer>
 
-  
-<section id="founder" style="padding:60px 20px;background:#071b3a;color:#fff;text-align:center;">
-  <div style="max-width:850px;margin:auto;">
-    <h2 style="color:#e5b33d;font-size:30px;">Meet Our Founder</h2>
-    <img src="nexabridge-founder-joshua.jpg"
-      alt="Joshua Buter Terngu"
-      style="width:220px;height:220px;object-fit:cover;border-radius:50%;border:5px solid #d9aa32;margin:20px auto;">
-    <h3>Joshua Buter Terngu</h3>
-    <p style="color:#e5b33d;font-weight:bold;">Founder &amp; Director</p>
-    <p style="line-height:1.8;max-width:700px;margin:20px auto;">
-      My vision is to connect people, empower professionals and create opportunities that help individuals and businesses grow beyond borders.
-    </p>
-    <h3 style="color:#e5b33d;">NexaBridge Global</h3>
-    <p>Connecting People. Empowering Progress.</p>
-  </div>
-</section>
-  
+<a class="whatsapp" href="https://wa.me/2347069936770" target="_blank" rel="noopener">
+  WhatsApp Us
+</a>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const visitorEmail = document.getElementById("visitorEmail").value.trim();
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value.trim();
+
+  const subject = encodeURIComponent("NexaBridge Global Enquiry: " + service);
+  const body = encodeURIComponent(
+    "Name: " + name +
+    "\nEmail: " + visitorEmail +
+    "\nService: " + service +
+    "\n\nMessage:\n" + message
+  );
+
+  window.location.href =
+    "mailto:joshuabuterterngu.resumes@gmail.com?subject=" +
+    subject + "&body=" + body;
+});
+
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.querySelector("nav").classList.remove("open");
+  });
+});
+</script>
+
 </body>
 </html>
