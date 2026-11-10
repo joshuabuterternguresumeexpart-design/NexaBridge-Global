@@ -551,6 +551,25 @@ footer a:hover {color:var(--gold)}
             <option>Document Preparation & Formatting</option>
             <option>Global Professional Community</option>
             <option>General Enquiry</option>
+            const servicePages = [
+  "cv-resume-writing.html",
+  "job-search-assistance.html",
+  "linkedin-profile-optimization.html",
+  "cover-letter-writing.html",
+  "virtual-assistance.html",
+  "creative-design.html",
+  "business-support.html",
+  "website-digital-support.html",
+  "document-preparation.html",
+  "global-professional-community.html"
+];
+
+document.querySelectorAll(".service-card").forEach((card, index) => {
+  card.style.cursor = "pointer";
+  card.addEventListener("click", () => {
+    window.location.href = servicePages[index];
+  });
+});
           </select>
 
           <label for="message">Your Message</label>
